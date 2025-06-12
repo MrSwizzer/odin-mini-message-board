@@ -14,7 +14,8 @@ app.set('view engine', 'ejs');
 
 app.use('/', indexRouter);
 
-const PORT = 5000;
-app.listen(PORT, () => {
-	console.log(`Express is listening on Port: ${PORT}`);
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+	console.log(`Express is listening on Port: ${port}`);
 });
